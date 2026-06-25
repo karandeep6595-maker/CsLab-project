@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karandeep Singh | CS Portfolio & CV</title>
+    <meta name="description" content="Portfolio website of Karandeep Singh, a Computer Science undergraduate at Gisma University of Applied Sciences, Berlin. Exploring Python, SQL, DSA, and Web Development.">
+    <meta name="keywords" content="Karandeep Singh, Computer Science, Gisma, Berlin, Python, SQL, Portfolio, Web Developer, Resume, CV">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hidden Checkboxes for Pure CSS Logic -->
+    <input type="checkbox" id="theme-toggle-cb" class="hidden-cb">
+    <input type="checkbox" id="mobile-menu-cb" class="hidden-cb">
+    
+    <!-- Project Filter Radio Buttons (placed top-level for :has selection) -->
+    <input type="radio" id="filter-all" name="project-filter" class="filter-radio" checked>
+    <input type="radio" id="filter-python" name="project-filter" class="filter-radio">
+    <input type="radio" id="filter-sql" name="project-filter" class="filter-radio">
+    <input type="radio" id="filter-web" name="project-filter" class="filter-radio">
+
+    <!-- Background Gradient Grids -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    
+    <!-- Floating Header -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="#home" class="logo" id="logo-nav">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">Karandeep<span class="gradient-text">.dev</span></span>
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active" id="link-home">Home</a></li>
+                <li><a href="#about" id="link-about">About</a></li>
+                <li><a href="#skills" id="link-skills">Skills</a></li>
+                <li><a href="#projects" id="link-projects">Projects</a></li>
+                <li><a href="#terminal" id="link-terminal">Terminal</a></li>
+                <li><a href="#contact" id="link-contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button (Label linked to hidden checkbox) -->
+                <label for="theme-toggle-cb" class="theme-toggle" id="theme-toggle-label" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </label>
+                
+                <!-- Mobile Menu Button (Label linked to hidden checkbox) -->
+                <label for="mobile-menu-cb" class="mobile-menu-btn" id="mobile-menu-label" aria-label="Open menu">
+                    <i class="fa-solid fa-bars menu-bars"></i>
+                    <i class="fa-solid fa-xmark menu-close"></i>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge hero-badge">
+                        <span class="pulse-dot"></span> Available for Opportunities
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <br>
+                        <span class="gradient-text hero-name">Karandeep Singh</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        I am a <span class="typing-text">Computer Science Undergraduate</span>
+                    </h2>
+                    <p class="hero-desc">
+                        A motivated Computer Science undergraduate student at Gisma University of Applied Sciences, Berlin. Experienced in Python programming, database design, and data structures. Committed to producing clear and well-structured technical work.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary" id="hero-btn-projects">Explore Projects <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-outline" id="hero-btn-contact">Contact Me <i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="image-wrapper">
+                        <img src="assets/developer_avatar.png" alt="Karandeep Singh Illustration" class="hero-img">
+                        <div class="tech-floating-icon icon-python" title="Python"><i class="fa-brands fa-python"></i></div>
+                        <div class="tech-floating-icon icon-database" title="SQL"><i class="fa-solid fa-database"></i></div>
+                        <div class="tech-floating-icon icon-code" title="Algorithms"><i class="fa-solid fa-terminal"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll to About section"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+        </section>
+
+        <!-- About & Education Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="gradient-text">About Me</span></h2>
+                    <p class="section-subtitle">My profile, educational journey, and linguistic skills</p>
+                </div>
+                
+                <div class="about-grid">
+                    <!-- Column 1: Profile & Languages -->
+                    <div class="about-info-col">
+                        <div class="glass-card profile-card">
+                            <h3 class="card-title"><i class="fa-regular fa-user gradient-text"></i> Profile</h3>
+                            <p class="profile-text">
+                                As a passionate CS undergraduate, I focus on building solid software foundations. I enjoy breaking down complex problems into clean algorithms and designing structured databases.
+                            </p>
+                            <p class="profile-text">
+                                Being a collaborative team player with strong multilingual skills, I adapt easily to international environments and communicate technical ideas effectively.
+                            </p>
+                        </div>
+                        
+                        <div class="glass-card languages-card">
+                            <h3 class="card-title"><i class="fa-solid fa-language gradient-text"></i> Languages</h3>
+                            <div class="language-list">
+                                <div class="language-item">
+                                    <div class="lang-info">
+                                        <span class="lang-name">English</span>
+                                        <span class="lang-level">Fluent</span>
+                                    </div>
+                                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 95%;"></div></div>
+                                </div>
+                                <div class="language-item">
+                                    <div class="lang-info">
+                                        <span class="lang-name">Hindi</span>
+                                        <span class="lang-level">Native</span>
+                                    </div>
+                                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 100%;"></div></div>
+                                </div>
+                                <div class="language-item">
+                                    <div class="lang-info">
+                                        <span class="lang-name">Punjabi</span>
+                                        <span class="lang-level">Native</span>
+                                    </div>
+                                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 100%;"></div></div>
+                                </div>
+                                <div class="language-item">
+                                    <div class="lang-info">
+                                        <span class="lang-name">German</span>
+                                        <span class="lang-level">Basic (A1/A2)</span>
+                                    </div>
+                                    <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 35%;"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2: Education -->
+                    <div class="about-education-col">
+                        <div class="glass-card education-card">
+                            <h3 class="card-title"><i class="fa-solid fa-graduation-cap gradient-text"></i> Education</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2023 – Present</span>
+                                        <h4 class="timeline-degree">BSc Computer Science</h4>
+                                        <span class="timeline-institution">Gisma University of Applied Sciences, Berlin, Germany</span>
+                                        <p class="timeline-details">
+                                            Focusing on core software principles, systems architecture, and engineering methodologies.
+                                        </p>
+                                        <div class="timeline-modules">
+                                            <span class="module-badge">Python Programming</span>
+                                            <span class="module-badge">Databases</span>
+                                            <span class="module-badge">Data Structures & Algorithms (DSA)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">Completed prior to 2023</span>
+                                        <h4 class="timeline-degree">Higher Secondary Certificate (PCM + CS)</h4>
+                                        <span class="timeline-institution">Science Stream with Computer Science</span>
+                                        <p class="timeline-details">
+                                            Comprehensive foundation in Physics, Chemistry, Mathematics, and Computer Science fundamentals.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="gradient-text">Technical Skills</span></h2>
+                    <p class="section-subtitle">My core computer science and technical competencies</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Programming -->
+                    <div class="glass-card skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-solid fa-code skill-category-icon"></i>
+                        </div>
+                        <h3 class="skill-category-title">Programming</h3>
+                        <ul class="skill-item-list">
+                            <li>
+                                <div class="skill-item-info">
+                                    <span>Python <small>(Entry level)</small></span>
+                                    <span class="skill-dot-active"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-item-info">
+                                    <span>SQL</span>
+                                    <span class="skill-dot-active"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- CS Concepts -->
+                    <div class="glass-card skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-solid fa-brain skill-category-icon"></i>
+                        </div>
+                        <h3 class="skill-category-title">CS Concepts</h3>
+                        <ul class="skill-item-list">
+                            <li><i class="fa-solid fa-circle-check list-check"></i> Data Structures</li>
+                            <li><i class="fa-solid fa-circle-check list-check"></i> Algorithms</li>
+                            <li><i class="fa-solid fa-circle-check list-check"></i> Relational Databases</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div class="glass-card skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-solid fa-screwdriver-wrench skill-category-icon"></i>
+                        </div>
+                        <h3 class="skill-category-title">Tools</h3>
+                        <ul class="skill-item-list">
+                            <li><i class="fa-brands fa-git-alt list-check"></i> Git</li>
+                            <li><i class="fa-brands fa-github list-check"></i> GitHub</li>
+                            <li><i class="fa-solid fa-cloud-arrow-up list-check"></i> GitHub Pages</li>
+                            <li><i class="fa-solid fa-square-root-variable list-check"></i> LaTeX</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Web -->
+                    <div class="glass-card skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-solid fa-globe skill-category-icon"></i>
+                        </div>
+                        <h3 class="skill-category-title">Web</h3>
+                        <ul class="skill-item-list">
+                            <li><i class="fa-brands fa-html5 list-check"></i> HTML</li>
+                            <li><i class="fa-brands fa-css3-alt list-check"></i> CSS</li>
+                            <li><i class="fa-solid fa-paper-plane list-check"></i> Static Sites</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="gradient-text">Academic Projects</span></h2>
+                    <p class="section-subtitle">Academic modules and practical programming exercises</p>
+                </div>
+                
+                <!-- Project Filters (Styled Labels associated with the radio inputs near body start) -->
+                <div class="project-filters">
+                    <label for="filter-all" class="filter-label" id="label-all">All</label>
+                    <label for="filter-python" class="filter-label" id="label-python">Python</label>
+                    <label for="filter-sql" class="filter-label" id="label-sql">SQL / DB</label>
+                    <label for="filter-web" class="filter-label" id="label-web">Web</label>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project 1: CS Portfolio Website -->
+                    <div class="glass-card project-card project-web">
+                        <div class="project-header">
+                            <span class="project-tag-badge">Web / HTML / CSS</span>
+                            <a href="https://github.com/karandeep6595" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <h3 class="project-name">CS Portfolio Website</h3>
+                        <p class="project-description">
+                            A personal computer science portfolio hosted on GitHub Pages. Built with HTML, CSS, and interactive accordion features, highlighting a CV and a showcase of academic exercises.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>GitHub Pages</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2: Python Programming Exercises -->
+                    <div class="glass-card project-card project-python">
+                        <div class="project-header">
+                            <span class="project-tag-badge">Python</span>
+                            <span class="project-link-placeholder"><i class="fa-brands fa-python"></i></span>
+                        </div>
+                        <h3 class="project-name">Python Programming Exercises</h3>
+                        <p class="project-description">
+                            Entry-level Python programs covering control flow, functions, lists, and file I/O operations, developed as part of the B201 Computer Science Lab module.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span>Python 3</span>
+                            <span>Control Flow</span>
+                            <span>File Handling</span>
+                            <span>Lab Modules</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3: Database Design & SQL Queries -->
+                    <div class="glass-card project-card project-sql">
+                        <div class="project-header">
+                            <span class="project-tag-badge">SQL / Databases</span>
+                            <span class="project-link-placeholder"><i class="fa-solid fa-database"></i></span>
+                        </div>
+                        <h3 class="project-name">Database Design & SQL Queries</h3>
+                        <p class="project-description">
+                            Entity-Relationship (ER) diagram design, relational schema normalisation, and complex SQL query writing practised in the Gisma Databases module.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span>ER Diagrams</span>
+                            <span>Normalisation</span>
+                            <span>SQL Queries</span>
+                            <span>Relational DB</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4: Data Structures Implementations -->
+                    <div class="glass-card project-card project-python">
+                        <div class="project-header">
+                            <span class="project-tag-badge">Python / DSA</span>
+                            <span class="project-link-placeholder"><i class="fa-solid fa-gears"></i></span>
+                        </div>
+                        <h3 class="project-name">Data Structures Implementations</h3>
+                        <p class="project-description">
+                            Python implementations of fundamental data structures such as linked lists, stacks, queues, and sorting algorithms completed in the DSA module.
+                        </p>
+                        <div class="project-tech-badges">
+                            <span>Python</span>
+                            <span>Linked Lists</span>
+                            <span>Stacks & Queues</span>
+                            <span>Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal Section -->
+        <section id="terminal" class="terminal-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="gradient-text">Interactive Terminal</span></h2>
+                    <p class="section-subtitle">Query my curriculum vitae using collapsible prompt accordion lists</p>
+                </div>
+                
+                <!-- Terminal Window -->
+                <div class="terminal-window">
+                    <div class="terminal-bar">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">guest@karandeep-singh: ~</div>
+                        <div class="terminal-mode-indicator">html/css</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-welcome">
+                            <p>Welcome to Karandeep's CSS Interactive Terminal (v2.0.0 - No Javascript)</p>
+                            <p>Click on any line command below to run and expand its output details.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                        
+                        <div class="terminal-accordion">
+                            <!-- About -->
+                            <details class="terminal-cmd" open>
+                                <summary><span class="terminal-prompt">guest@karandeep-singh:~$</span> cat about.txt</summary>
+                                <div class="terminal-cmd-out">
+Profile:
+  Motivated Computer Science undergraduate at Gisma University of Applied Sciences, Berlin.
+  Experienced in Python programming, database design, and data structures.
+  A collaborative team player with strong communication skills across multiple languages,
+  committed to producing clear and well-structured technical work.
+                                </div>
+                            </details>
+
+                            <!-- Education -->
+                            <details class="terminal-cmd">
+                                <summary><span class="terminal-prompt">guest@karandeep-singh:~$</span> cat education.txt</summary>
+                                <div class="terminal-cmd-out">
+Education Journey:
+
+  1. BSc Computer Science (2023 - Present)
+     Gisma University of Applied Sciences | Berlin, Germany
+     Relevant Modules: Python Programming, Databases, Data Structures & Algorithms (DSA)
+
+  2. Higher Secondary Certificate (PCM + CS) (Prior to 2023)
+     Core subjects: Physics, Chemistry, Mathematics & Computer Science
+                                </div>
+                            </details>
+
+                            <!-- Skills -->
+                            <details class="terminal-cmd">
+                                <summary><span class="terminal-prompt">guest@karandeep-singh:~$</span> cat skills.txt</summary>
+                                <div class="terminal-cmd-out">
+Technical Matrix:
+
+  [Programming]    Python (entry level), SQL
+  [CS Concepts]    Data Structures, Algorithms, Relational Databases
+  [Tools]          Git, GitHub, GitHub Pages, LaTeX
+  [Web]            HTML, CSS (static sites)
+
+  [Languages]      English (Fluent), Hindi (Native), Punjabi (Native), German (A1/A2)
+                                </div>
+                            </details>
+
+                            <!-- Projects -->
+                            <details class="terminal-cmd">
+                                <summary><span class="terminal-prompt">guest@karandeep-singh:~$</span> cat projects.txt</summary>
+                                <div class="terminal-cmd-out">
+Academic Project Database:
+
+  1. CS Portfolio Website (Web / HTML / CSS)
+     Hosted on GitHub Pages. Rich interactive developer showcase.
+
+  2. Python Programming Exercises (Python)
+     Covering control flows, functions, lists, and IO lab modules.
+
+  3. Database Design & SQL Queries (SQL)
+     ER diagrams, relational normalization, and SQL optimization practice.
+
+  4. Data Structures Implementations (Python / DSA)
+     Python implementations of lists, stacks, queues, and sorting algorithms.
+                                </div>
+                            </details>
+
+                            <!-- Contact -->
+                            <details class="terminal-cmd">
+                                <summary><span class="terminal-prompt">guest@karandeep-singh:~$</span> cat contact.txt</summary>
+                                <div class="terminal-cmd-out">
+Contact Gateways:
+  Email:      karandeep6595@gmail.com
+  Phone:      +49 152 1541 6455
+  Location:   Berlin, Germany
+  GitHub:     github.com/karandeep6595
+                                </div>
+                            </details>
+
+                            <!-- Secret command -->
+                            <details class="terminal-cmd">
+                                <summary><span class="terminal-prompt">guest@karandeep-singh:~$</span> ./secret_diagnostic.sh</summary>
+                                <div class="terminal-cmd-out">
+Initializing system diagnostic protocols...
+...........................................
+[OK] Codebase Logic: Running 100% JavaScript-Free.
+[OK] Environment: Rendered with native Web standards.
+
+"Simplicity is the ultimate sophistication." - Leonardo da Vinci
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soft Skills & Interests Section -->
+        <section id="soft-skills" class="soft-skills-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="gradient-text">Interpersonal & Interests</span></h2>
+                    <p class="section-subtitle">Beyond technical capabilities: how I collaborate and what excites me</p>
+                </div>
+                
+                <div class="soft-skills-grid">
+                    <!-- Soft Skills Column -->
+                    <div class="soft-skills-col">
+                        <h3 class="sub-section-title"><i class="fa-solid fa-users gradient-text"></i> Soft Skills</h3>
+                        <div class="soft-skill-cards">
+                            <div class="glass-card soft-card">
+                                <div class="soft-card-title-row">
+                                    <div class="soft-icon-box"><i class="fa-solid fa-people-group"></i></div>
+                                    <h4>Teamwork & Collaboration</h4>
+                                </div>
+                                <p>Comfortable working in group settings, contributing to shared goals and coordinating tasks across team members effectively.</p>
+                            </div>
+                            
+                            <div class="glass-card soft-card">
+                                <div class="soft-card-title-row">
+                                    <div class="soft-icon-box"><i class="fa-solid fa-comments"></i></div>
+                                    <h4>Communication</h4>
+                                </div>
+                                <p>Able to explain technical concepts clearly in English, Hindi, and Punjabi; developing German language ability.</p>
+                            </div>
+                            
+                            <div class="glass-card soft-card">
+                                <div class="soft-card-title-row">
+                                    <div class="soft-icon-box"><i class="fa-solid fa-bullseye"></i></div>
+                                    <h4>Self-awareness</h4>
+                                </div>
+                                <p>Actively managing workload through structured planning and task prioritisation to address challenges with time management.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Interests Column -->
+                    <div class="interests-col">
+                        <h3 class="sub-section-title"><i class="fa-solid fa-heart gradient-text"></i> Key Interests</h3>
+                        <div class="interests-container glass-card">
+                            <ul class="interests-list">
+                                <li>
+                                    <div class="interest-icon"><i class="fa-solid fa-microchip"></i></div>
+                                    <div class="interest-details">
+                                        <h5>Computer Science Fundamentals</h5>
+                                        <p>Fascinated by logic, computation systems, complexity analysis, and discrete mathematics.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="interest-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                    <div class="interest-details">
+                                        <h5>Software Development</h5>
+                                        <p>Building clean, scalable, and maintainable software to solve daily operational tasks and automate systems.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="interest-icon"><i class="fa-brands fa-git"></i></div>
+                                    <div class="interest-details">
+                                        <h5>Open-source Tools</h5>
+                                        <p>Advocate for transparent development, community contributions, and learning from open collaborations.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="interest-icon"><i class="fa-solid fa-globe"></i></div>
+                                    <div class="interest-details">
+                                        <h5>Multilingual Communication</h5>
+                                        <p>Exploring diverse cultures and systems by learning new languages (currently developing German A1/A2).</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="gradient-text">Contact Me</span></h2>
+                    <p class="section-subtitle">Feel free to reach out for projects, collaborations, or questions</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <!-- Contact Cards -->
+                    <div class="contact-info-cards">
+                        <!-- Email Card -->
+                        <a href="mailto:karandeep6595@gmail.com" class="glass-card contact-card">
+                            <div class="contact-icon-box"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="contact-card-content">
+                                <h4>Email</h4>
+                                <p>karandeep6595@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <!-- Phone Card -->
+                        <a href="tel:+4915215416455" class="glass-card contact-card">
+                            <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-card-content">
+                                <h4>Phone</h4>
+                                <p>+49 152 1541 6455</p>
+                            </div>
+                        </a>
+                        
+                        <!-- Location Card -->
+                        <div class="glass-card contact-card">
+                            <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-card-content">
+                                <h4>Location</h4>
+                                <p>Berlin, Germany</p>
+                            </div>
+                        </div>
+                        
+                        <!-- GitHub Card -->
+                        <a href="https://github.com/karandeep6595" target="_blank" rel="noopener noreferrer" class="glass-card contact-card">
+                            <div class="contact-icon-box"><i class="fa-brands fa-github"></i></div>
+                            <div class="contact-card-content">
+                                <h4>GitHub</h4>
+                                <p>github.com/karandeep6595</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="glass-card contact-form-wrapper">
+                        <!-- No action specified, standard valid browser behavior will occur -->
+                        <form id="contact-form" class="contact-form" action="#" method="get">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Your Name</label>
+                                    <input type="text" id="form-name" required placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Your Email</label>
+                                    <input type="email" id="form-email" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" required placeholder="Inquiry about project collaboration">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" required placeholder="Hi Karandeep, I would love to connect with you regarding..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">
+                                Send Message <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <a href="#home" class="logo" id="logo-footer">
+                    <span class="logo-icon">&lt;/&gt;</span>
+                    <span class="logo-text">Karandeep<span class="gradient-text">.dev</span></span>
+                </a>
+                <div class="footer-socials">
+                    <a href="https://github.com/karandeep6595" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:karandeep6595@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="tel:+4915215416455" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Karandeep Singh. All rights reserved.</p>
+                <p class="last-updated">Last updated: 2025</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{array}
+\usepackage{tabularx}
+
+% ---- Colours ----
+\definecolor{accent}{HTML}{1f6feb}
+\definecolor{muted}{HTML}{555555}
+
+% ---- Hyperlink setup ----
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent
+}
+
+% ---- Section styling ----
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% ---- Helper: CV Item ----
+\newcommand{\cvitem}[4]{%
+  \textbf{#1} \hfill \textit{\color{muted}#2} \\
+  \textit{#3} \hfill \color{muted}#4 \\[2pt]
+}
+
+\begin{document}
+
+% ============================
+%           HEADER
+% ============================
+\begin{center}
+  {\LARGE\bfseries Karandeep Singh}\\[4pt]
+  \color{muted}
+  \faEnvelope\ \href{mailto:karandeep6595@gmail.com}{karandeep6595@gmail.com} \quad
+  \faPhone\ \href{tel:+4915215416455}{+49 152 1541 6455} \quad
+  \faMapMarker*\ Berlin, Germany \\[2pt]
+  \faGithub\ \href{https://github.com/karandeep6595-maker}{github.com/karandeep6595}
+\end{center}
+
+\vspace{6pt}
+
+% ============================
+%           ABOUT
+% ============================
+\section{Profile}
+
+Motivated Computer Science undergraduate at Gisma University of Applied Sciences, Berlin.
+Experienced in Python programming, database design, and data structures. A collaborative
+team player with strong communication skills across multiple languages, committed to
+producing clear and well-structured technical work.
+
+% ============================
+%         EDUCATION
+% ============================
+\section{Education}
+
+\cvitem{BSc Computer Science}{2023 -- Present}
+       {Gisma University of Applied Sciences}{Berlin, Germany}
+Relevant modules: Introduction to Python, Databases, Data Structures \& Algorithms (DSA)
+
+\vspace{6pt}
+
+\cvitem{Higher Secondary Certificate (PCM + CS)}{Completed prior to 2023}
+       {Physics, Chemistry, Mathematics \& Computer Science}{}
+
+% ============================
+%      TECHNICAL SKILLS
+% ============================
+\section{Technical Skills}
+
+\begin{tabular}{@{}p{3.5cm} p{11cm}}
+  \textbf{Programming}    & Python (entry level), SQL \\
+  \textbf{CS Concepts}    & Data Structures, Algorithms, Relational Databases \\
+  \textbf{Tools}          & Git, GitHub, GitHub Pages, \LaTeX \\
+  \textbf{Web}            & HTML, CSS (static sites) \\
+\end{tabular}
+
+% ============================
+%        LANGUAGES
+% ============================
+\section{Languages}
+
+\begin{tabular}{@{}p{3.5cm} p{11cm}}
+  \textbf{English}  & Fluent \\
+  \textbf{Hindi}    & Native \\
+  \textbf{Punjabi}  & Native \\
+  \textbf{German}   & Basic (A1/A2) \\
+\end{tabular}
+
+% ============================
+%         PROJECTS
+% ============================
+\section{Projects}
+
+\textbf{CS Portfolio Website} \hfill \href{https://github.com/karandeep6595}{github.com/karandeep6595}\\
+A personal computer science portfolio hosted on GitHub Pages. Built with HTML and CSS,
+featuring a CV (this document) and a showcase of technical exercises.
+
+\vspace{6pt}
+\textbf{Python Programming Exercises}\\
+Entry-level Python programs covering control flow, functions, lists, and file I/O,
+developed as part of the B201 Computer Science Lab module.
+
+\vspace{6pt}
+\textbf{Database Design \& SQL Queries}\\
+ER diagram design, relational schema normalisation, and SQL query writing
+practised in the Databases module.
+
+\vspace{6pt}
+\textbf{Data Structures Implementations}\\
+Python implementations of linked lists, stacks, queues, and sorting algorithms
+completed in the DSA module.
+
+% ============================
+%       SOFT SKILLS
+% ============================
+\section{Soft Skills}
+
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+  \item \textbf{Teamwork \& Collaboration} -- comfortable working in group settings,
+        contributing to shared goals and coordinating tasks across team members.
+  \item \textbf{Communication} -- able to explain technical concepts clearly in
+        English, Hindi, and Punjabi; developing German language ability.
+  \item \textbf{Self-awareness} -- actively managing workload through structured
+        planning and task prioritisation to address challenges with time management.
+\end{itemize}
+
+% ============================
+%          INTERESTS
+% ============================
+\section{Interests}
+
+Computer Science fundamentals \textbullet\ Software development \textbullet\
+Open-source tools \textbullet\ Multilingual communication
+
+\vfill
+{\footnotesize\color{muted} Last updated: 2025}
+
+\end{document}
